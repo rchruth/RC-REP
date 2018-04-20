@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 	void Update()
 	{
 		ballObj = GameObject.FindGameObjectWithTag("Ball");
+		Debug.Log (ballObj);
 		if(ballObj != null)
 		{
 			targetPos = Vector3.Lerp(transform.position, ballObj.transform.position, Time.deltaTime * speed);
